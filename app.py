@@ -5,11 +5,6 @@ app = Flask(__name__)
 
 @app.route('/index')
 def index():
-    data = request.form
-    print(data)
-    if request.form:
-        name = request.form.get("fname")
-        lname = request.form.get("lname")
     return render_template("index.html",title="Feedback_form")
 
 @app.route('/act',methods=['POST'])
